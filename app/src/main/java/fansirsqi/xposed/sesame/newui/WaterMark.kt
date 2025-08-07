@@ -132,8 +132,10 @@ class WatermarkView(context: android.content.Context) : android.view.View(contex
             color: Int = "#87FF0000".toColorInt(),
             fontSize: Float = 28f,
             spacingX: Float = 2.5f,
-            spacingY: Float = 3.7f
-        ): WatermarkView {
+            spacingY: Float = 3.7f,
+            enabled: Boolean = true // 新增控制开关
+        ): WatermarkView? { // WatermarkView?返回类型为可空
+            if (!enabled) return null // 如果禁用则直接返回 null
             val watermarkView = WatermarkView(activity).apply {
                 watermarkText = text
                 setWatermarkStyle(color, fontSize)
