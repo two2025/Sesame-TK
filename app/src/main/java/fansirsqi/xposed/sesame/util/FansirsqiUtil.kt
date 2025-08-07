@@ -37,12 +37,10 @@ object FansirsqiUtil {
                 "love", // 爱情语录
                 " 好好吃饭。🍚"
             )
-//            val from = jsonObject.optString("from", "少年游·润州作代人寄远 苏轼")
-
             "$hitokoto\n\n                    -----By：《 F ❤ C 》"
         } catch (e: Exception) {
             Log.printStackTrace(e)
-            " 记得好好吃饭。🍚\n\n                    -----By：《 F ❤ C 》"
+            " 好好吃饭。\n\n                    -----By：《 F ❤ C 》"
         }
     }
 
