@@ -35,14 +35,14 @@ object FansirsqiUtil {
             val hitokoto = dataObject.optString(
                 //"hitokoto", //一言接口返回字段
                 "love", // 爱情语录
-                " 好好吃饭。"
+                " 好好吃饭。🍚"
             )
 //            val from = jsonObject.optString("from", "少年游·润州作代人寄远 苏轼")
 
             "$hitokoto\n\n                    -----By：《 F ❤ C 》"
         } catch (e: Exception) {
             Log.printStackTrace(e)
-            " 记得好好吃饭。\n\n                    -----By：《 F ❤ C 》"
+            " 记得好好吃饭。🍚\n\n                    -----By：《 F ❤ C 》"
         }
     }
 
