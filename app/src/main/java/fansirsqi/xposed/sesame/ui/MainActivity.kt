@@ -193,7 +193,15 @@ class MainActivity : BaseActivity() {
             }
 
             R.id.btn_friend_watch -> {
-                ToastUtil.makeText(this, "🏗 功能施工中...", Toast.LENGTH_SHORT).show()
+                // ToastUtil.makeText(this, "🏗 功能施工中...", Toast.LENGTH_SHORT).show()
+                showSelectionDialog(
+                    "🤣 请选择有效账户[别选默认]",
+                    userNameArray,
+                    { index: Int -> this.goFriendWatch(index) },
+                    "😡 老子不选了，滚",
+                    {},
+                    false
+                )
                 return
             }
 
