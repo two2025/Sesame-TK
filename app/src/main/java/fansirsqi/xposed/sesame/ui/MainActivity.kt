@@ -102,12 +102,13 @@ class MainActivity : BaseActivity() {
             Log.error(TAG, "load libSesame err:" + e.message)
         }
 
-        // 原始代码完全注释掉：
-        /*
         lifecycleScope.launch {
             val result = FansirsqiUtil.getOneWord()
             oneWord.text = result
         }
+
+        // 原始代码完全注释掉：
+        /*
         c = SecureApiClient(baseUrl = getRandomApi(0x22), signatureKey = getRandomEncryptData(0xCF))
         lifecycleScope.launch {
             val result = withContext(Dispatchers.IO) {
@@ -402,6 +403,7 @@ class MainActivity : BaseActivity() {
         }
     }
 
+
     private fun goFriendWatch(index: Int) {
         val userEntity = userEntityArray[index]
         if (userEntity != null) {
@@ -417,7 +419,6 @@ class MainActivity : BaseActivity() {
             ToastUtil.makeText(this, "😡 别选默认！！！！！！！！", Toast.LENGTH_LONG).show()
         }
     }
-    
     private fun goSettingActivity(index: Int) {
         if (Detector.loadLibrary("checker")) {
             val userEntity = userEntityArray[index]
