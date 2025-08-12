@@ -124,6 +124,7 @@ jobs:
           NORMAL_FILE: ${{ steps.extract_apks.outputs.signed_normal }}
           COMPATIBLE_FILE: ${{ steps.extract_apks.outputs.signed_compatible }}
           COMMIT_MESSAGE: |+
+            From TKTK
             New push to github\!
             ```
             ${{ github.event.head_commit.message }}
