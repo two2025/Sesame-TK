@@ -90,9 +90,10 @@ fun DeviceInfoCard(info: Map<String, String>) {
             Text(
                     text = "《 F ❤ C 》",
                     fontSize = 12.sp,
-                    color = Color.Red,
-                    modifier = Modifier.fillMaxWidth(),
-                    textAlign = TextAlign.Center
+                    color = Color.Red
+                // ,
+                //     modifier = Modifier.fillMaxWidth(),
+                //     textAlign = TextAlign.Center
             )
         }
     }
