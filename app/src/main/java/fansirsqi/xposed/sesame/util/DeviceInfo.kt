@@ -84,6 +84,16 @@ fun DeviceInfoCard(info: Map<String, String>) {
                 }
                 Spacer(modifier = Modifier.height(4.dp))
             }
+            // 换行间距（可选）
+            Spacer(modifier = Modifier.height(4.dp))
+            // 循环外单独显示红色自定义文字
+            Text(
+                    text = "《 F ❤ C 》",
+                    fontSize = 12.sp,
+                    color = Color.Red,
+                    modifier = Modifier.fillMaxWidth(),
+                    textAlign = TextAlign.Center
+            )
         }
     }
 }
