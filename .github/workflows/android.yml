@@ -108,13 +108,13 @@ jobs:
           sha256sum ${{ steps.extract_apks.outputs.signed_normal }} > CHECKSUMS-Sesame-Normal-${{ steps.extract_info.outputs.version }}.${{ env.SHORT_SHA }}-signed.apk.sha256
           sha256sum ${{ steps.extract_apks.outputs.signed_compatible }} > CHECKSUMS-Sesame-Compatible-${{ steps.extract_info.outputs.version }}.${{ env.SHORT_SHA }}-signed.apk.sha256
 
-      - name: 利用版本号创建标签
-        if: startsWith(github.ref, 'refs/heads/main') && github.event_name == 'push'
-        run: |
-          VERSION_TAG="v${{ steps.extract_info.outputs.version }}"
-          echo "Creating tag: $VERSION_TAG"
-          git tag "$VERSION_TAG"
-          git push origin "$VERSION_TAG"
+      # - name: 利用版本号创建标签
+      #   if: startsWith(github.ref, 'refs/heads/main') && github.event_name == 'push'
+      #   run: |
+      #     VERSION_TAG="v${{ steps.extract_info.outputs.version }}"
+      #     echo "Creating tag: $VERSION_TAG"
+      #     git tag "$VERSION_TAG"
+      #     git push origin "$VERSION_TAG"
 
       - name: 发送到TG
         if: github.ref == 'refs/heads/main'
